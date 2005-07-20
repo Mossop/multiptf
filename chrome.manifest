@@ -1,0 +1,9 @@
+content		multiptf	jar:chrome/multiptf.jar!/content/
+skin			multiptf	classic/1.0	jar:chrome/multiptf.jar!/skin/
+locale		multiptf	en-US	jar:chrome/multiptf.jar!/locale/en-US/
+
+overlay		chrome://browser/content/browser.xul	chrome://multiptf/content/browserOverlay.xul
+overlay		chrome://browser/content/bookmarks/bookmarksManager.xul	chrome://multiptf/content/managerOverlay.xul
+
+style 		chrome://browser/content/browser.xul chrome://multiptf/skin/multiptf.css
+style 		chrome://global/content/customizeToolbar.xul chrome://multiptf/skin/multiptf.css

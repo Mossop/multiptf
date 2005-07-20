@@ -1,0 +1,5 @@
+#wrapper-second-personal-bookmarks .toolbarpaletteitem-box {
+  width: 16px;
+  height: 16px;
+  background: url("chrome://browser/skin/Bookmarks-folder.png") no-repeat !important;
+}

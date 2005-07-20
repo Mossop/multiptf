@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{f78dd0ec-d117-4985-9d32-59977c0ee9ce}</em:id>
+    <em:version>0.9</em:version>
+    
+    <!-- Firefox version --> 
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>1.0</em:minVersion>
+        <em:maxVersion>1.0+</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
+    <!-- Front End MetaData -->
+    <em:name>Multi Bookmarks Toolbars</em:name>
+    <em:description>Adds another bookmarks toolbar to Firefox. Choose your toolbar from the Bookmarks Manager.</em:description>
+    <em:creator>Mossop</em:creator>
+    <em:homepageURL>http://www.blueprintit.co.uk/~dave/web/firefox/multiptf/index.html</em:homepageURL>
+    <em:updateURL>http://www.blueprintit.co.uk/~dave/web/firefox/update.rdf?guid=%ITEM_ID%&amp;version=%ITEM_VERSION%&amp;app=%APP_ID%&amp;appver=%APP_VERSION%</em:updateURL>
+    
+		<!-- Chrome registration for pre-1.1 apps -->
+		<em:file>
+			<Description about="urn:mozilla:extension:file:multiptf.jar">
+				<em:package>content/</em:package>
+				<em:skin>skin/</em:skin>
+				<em:locale>locale/en-US/</em:locale>
+			</Description>
+		</em:file>
+
+  </Description>      
+</RDF>

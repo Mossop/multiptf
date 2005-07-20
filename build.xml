@@ -1,0 +1,25 @@
+
+<project name="multiptf" default="package">
+
+	<target name="package">
+		<zip destfile="${basedir}/chrome/${ant.project.name}.jar">
+			<fileset dir="${basedir}/chrome">
+				<include name="**/*"/>
+				<exclude name="*.jar"/>
+			</fileset>
+		</zip>
+		<zip destfile="${basedir}/${ant.project.name}.xpi">
+			<fileset dir="${basedir}">
+				<exclude name="chrome/skin/"/>
+				<exclude name="chrome/content/"/>
+				<exclude name="chrome/locale/"/>
+				<include name="**/*"/>
+				<exclude name="components/*.idl"/>
+				<exclude name="*.xpi"/>
+				<exclude name="build.xml"/>
+				<exclude name=".*"/>
+			</fileset>
+		</zip>
+	</target>
+	
+</project>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<!--
+$HeadURL$
+$LastChangedBy$
+$Date$
+$Revision$
+-->
+
+<!DOCTYPE overlay [
+<!ENTITY % multiptfDTD SYSTEM "chrome://multiptf/locale/multiptf.dtd">
+%multiptfDTD;
+]>
+
+<overlay id="MultiPTFBrowserOverlay"
+				xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+				xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+			
+  <script type="application/x-javascript" src="multiptf.js" />
+  
+	<toolbarpalette id="BrowserToolbarPalette">
+		<toolbaritem id="second-personal-bookmarks" title="&multiptfToolbar.label;" flex="1" class="chromeclass-directories">
+			<stack id="second-bookmarks-stack" flex="1" style="min-width:0px; width:0px;"
+								onpopupshowing="BookmarksToolbar.setOpenedMenu(event);"
+								onpopuphidden="BookmarksToolbar.unsetOpenedMenu(event);">
+				<hbox id="second-bookmarks-ptf" class="bookmarks-toolbar-items" contextmenu="bookmarks-context-menu"
+								flex="1" style="min-width:0px; width:0px;margin-left: 3px;" 
+								datasources="rdf:bookmarks rdf:files rdf:localsearch"
+								template="bookmarks-template" flags="dont-test-empty"
+								infer="forward-proxy"
+								rdf:type="http://home.netscape.com/NC-rdf#Folder"
+								onpopupshowing="BookmarksMenu.onShowMenu(event.target)"
+								onpopuphidden="BookmarksMenu.onHideMenu(event.target)"
+								oncommand="BookmarksMenu.loadBookmark(event, event.target, this.database)"
+								onclick="BookmarksMenu.loadBookmarkMiddleClick(event, this.database)"
+								ondraggesture="nsDragAndDrop.startDrag(event, BookmarksMenuDNDObserver)"
+								ondragdrop="nsDragAndDrop.drop(event, BookmarksMenuDNDObserver); event.preventBubble()"
+								ondragenter="nsDragAndDrop.dragEnter(event, BookmarksMenuDNDObserver); event.preventBubble()"
+								ondragexit="nsDragAndDrop.dragExit(event, BookmarksMenuDNDObserver); event.preventBubble()"
+								ondragover="nsDragAndDrop.dragOver(event, BookmarksMenuDNDObserver); event.preventBubble()">
+				</hbox>
+				<hbox class="bookmarks-toolbar-overflow-items" mousethrough="always">
+					<hbox mousethrough="always" id="second-overflow-padder"/>
+					<toolbarbutton id="second-bookmarks-chevron" type="menu" class="chevron"
+								mousethrough="never" collapsed="true" 
+								datasources="rdf:bookmarks rdf:files rdf:localsearch"
+								template="bookmarks-template" flags="dont-test-empty"
+								onpopupshowing="BookmarksMenu.onShowMenu(event.target)"
+								onpopuphidden="BookmarksMenu.onHideMenu(event.target)"
+								oncommand="BookmarksMenu.loadBookmark(event, event.target, this.database)"
+								onclick="BookmarksMenu.loadBookmarkMiddleClick(event, this.database)"
+								ondraggesture="nsDragAndDrop.startDrag(event, BookmarksMenuDNDObserver)"
+								ondragdrop="nsDragAndDrop.drop(event, BookmarksMenuDNDObserver); event.preventBubble()"
+								ondragenter="nsDragAndDrop.dragEnter(event, BookmarksMenuDNDObserver); event.preventBubble()"
+								ondragexit="nsDragAndDrop.dragExit(event, BookmarksMenuDNDObserver); event.preventBubble()"
+								ondragover="nsDragAndDrop.dragOver(event, BookmarksMenuDNDObserver); event.preventBubble()">
+						<menupopup onpopupshowing="if (event.target == this) MultiPTFToolbar.updateOverflowMenu(this);"
+ 								contextmenu="bookmarks-context-menu"/>
+					</toolbarbutton>
+				</hbox>
+				<toolbarbutton class="bookmark-item bookmarks-toolbar-customize" mousethrough="never"
+								label="&multiptfToolbar.label;"/>
+			</stack>
+		</toolbaritem>
+	</toolbarpalette>
+	
+</overlay>
