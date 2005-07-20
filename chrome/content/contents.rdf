@@ -19,7 +19,7 @@
         <RDF:li>chrome://multiptf/content/managerOverlay.xul</RDF:li>
     </RDF:Seq>
 
-	<RDF:Description RDF:about="urn:mozilla:package:nightly"
+	<RDF:Description RDF:about="urn:mozilla:package:multiptf"
         chrome:displayName="Multi Bookmarks Toolbars"
         chrome:author="Mossop"
         chrome:name="multiptf">
