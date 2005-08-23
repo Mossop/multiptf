@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{f78dd0ec-d117-4985-9d32-59977c0ee9ce}</em:id>
-    <em:version>0.9</em:version>
+    <em:version>0.9.2</em:version>
     
     <!-- Firefox version --> 
     <em:targetApplication>
@@ -25,10 +25,11 @@
     
 		<!-- Chrome registration for pre-1.1 apps -->
 		<em:file>
-			<Description about="urn:mozilla:extension:file:multiptf.jar">
+			<Description about="urn:mozilla:extension:file:multiptf">
 				<em:package>content/</em:package>
 				<em:skin>skin/</em:skin>
 				<em:locale>locale/en-US/</em:locale>
+				<em:locale>locale/it-IT/</em:locale>
 			</Description>
 		</em:file>
 
