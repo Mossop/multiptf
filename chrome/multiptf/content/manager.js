@@ -4,6 +4,8 @@ multiptfMenu: null,
 
 init: function()
 {
+    var strBundle=document.getElementById("multiptflocale");
+
 	var menuitem = document.getElementById("menu_selectAll");
 	while ((menuitem)&&(menuitem.getAttribute("command")!="cmd_bm_setpersonaltoolbarfolder"))
 	{
@@ -24,7 +26,7 @@ init: function()
 	{
 		menupopup.appendChild(newitem);
 	}
-	newitem.setAttribute("label","Set as Second Bookmarks Toolbar");
+	newitem.setAttribute("label",strBundle.getString("multiptfMenu.label"));
 	newitem.addEventListener("command",MultiPTFManager.setToolbar,false);
 	MultiPTFManager.multiptfMenu=newitem;
 	menupopup.addEventListener("popupshowing",MultiPTFManager.setMenuState,false);
