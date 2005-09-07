@@ -21,8 +21,8 @@
     <em:description>Adds another bookmarks toolbar to Firefox. Choose your toolbar from the Bookmarks Manager.</em:description>
     <em:creator>Mossop</em:creator>
     <em:contributor>Luana - MatrixIsAllOver (Italian translation)</em:contributor>
-    <em:homepageURL>http://www.blueprintit.co.uk/~dave/web/firefox/multiptf/index.html</em:homepageURL>
-    <em:updateURL>http://www.blueprintit.co.uk/~dave/web/firefox/update.rdf?guid=%ITEM_ID%&amp;version=%ITEM_VERSION%&amp;app=%APP_ID%&amp;appver=%APP_VERSION%</em:updateURL>
+    <em:homepageURL>http://users.blueprintit.co.uk/~dave/web/firefox/multiptf/index.html</em:homepageURL>
+    <em:updateURL>http://users.blueprintit.co.uk/~dave/web/firefox/update.rdf?guid=%ITEM_ID%&amp;version=%ITEM_VERSION%&amp;app=%APP_ID%&amp;appver=%APP_VERSION%</em:updateURL>
     
 		<!-- Chrome registration for pre-1.1 apps -->
 		<em:file>
