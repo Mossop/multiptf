@@ -28,7 +28,7 @@ $Revision$
 
 	<toolbarpalette id="BrowserToolbarPalette">
 		<toolbaritem id="second-personal-bookmarks" title="&multiptfToolbar.label;" flex="1" class="chromeclass-directories">
-			<stack id="second-bookmarks-stack" flex="1" style="min-width:0px; width:0px;"
+			<stack id="second-bookmarks-stack" flex="1" style="min-width:0px; width:0px; overflow: hidden;"
 								onpopupshowing="BookmarksToolbar.setOpenedMenu(event);"
 								onpopuphidden="BookmarksToolbar.unsetOpenedMenu(event);">
 				<hbox id="second-bookmarks-ptf" class="bookmarks-toolbar-items" contextmenu="second-bookmarks-context-menu"
